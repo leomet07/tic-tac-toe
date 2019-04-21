@@ -17,6 +17,7 @@ var board = {
 	b2: { state: 'blank', allow: true },
 	b3: { state: 'blank', allow: true }
 };
+
 function init() {
 	canvas = document.getElementById('canvas');
 	//canvas.addEventListener("mousemove", setMousePosition, false);
