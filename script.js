@@ -279,6 +279,7 @@ function check(current) {
 
 	if (current.b1.state == 'x' && current.b2.state == 'x' && current.b3.state == 'x') {
 		console.log('x win');
+		//anothef corss out
 	} else if (current.b1.state == 'c' && current.b2.state == 'c' && current.b3.state == 'c') {
 		console.log('c win');
 	}
