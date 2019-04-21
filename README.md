@@ -1,5 +1,2 @@
 # tic-tac-toe
-tic tac oe with js
-hi
-c
-ds
+Tic-tac-toe with js and HTML canvas
