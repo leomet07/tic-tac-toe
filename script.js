@@ -274,6 +274,7 @@ function check(current) {
 		console.log('x win');
 	} else if (current.m1.state == 'c' && current.m2.state == 'c' && current.m3.state == 'c') {
 		console.log('c win');
+		//cross out
 	}
 
 	if (current.b1.state == 'x' && current.b2.state == 'x' && current.b3.state == 'x') {
