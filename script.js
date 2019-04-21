@@ -42,7 +42,7 @@ function togglewhenonmousdown(event) {
 		//sector 1
 		if (mousex < 208 && mousey < 208) {
 			console.log('sector 1');
-			document.getElementById('current_sector').innerHTML = 'sector 1';
+			//document.getElementById('current_sector').innerHTML = 'sector 1';
 			if (board.t1.state == 'blank') {
 				if (round % 2 == 0) {
 					board.t1.state = 'c';
@@ -63,7 +63,7 @@ function togglewhenonmousdown(event) {
 				console.log(round);
 				round++;
 			}
-			document.getElementById('current_sector').innerHTML = 'sector 2';
+			//document.getElementById('current_sector').innerHTML = 'sector 2';
 		} else if (mousex < 624 && mousey < 208) {
 			//last of rirst row
 			console.log('sector 3');
@@ -76,7 +76,7 @@ function togglewhenonmousdown(event) {
 				console.log(round);
 				round++;
 			}
-			document.getElementById('current_sector').innerHTML = 'sector 3';
+			//document.getElementById('current_sector').innerHTML = 'sector 3';
 		} else if (mousex < 208 && mousey < 416) {
 			//first of middle row
 			console.log('sector 4');
@@ -89,7 +89,7 @@ function togglewhenonmousdown(event) {
 				console.log(round);
 				round++;
 			}
-			document.getElementById('current_sector').innerHTML = 'sector 4';
+			//document.getElementById('current_sector').innerHTML = 'sector 4';
 		} else if (mousex < 416 && mousey < 416) {
 			//middle
 			console.log('sector 5');
@@ -103,10 +103,10 @@ function togglewhenonmousdown(event) {
 				round++;
 			}
 
-			document.getElementById('current_sector').innerHTML = 'sector 5';
+			//document.getElementById('current_sector').innerHTML = 'sector 5';
 		} else if (mousex < 624 && mousey < 416) {
 			console.log('sector 6');
-			document.getElementById('current_sector').innerHTML = 'sector 6';
+			//document.getElementById('current_sector').innerHTML = 'sector 6';
 			if (board.m3.state == 'blank') {
 				if (round % 2 == 0) {
 					board.m3.state = 'c';
@@ -128,7 +128,7 @@ function togglewhenonmousdown(event) {
 				console.log(round);
 				round++;
 			}
-			document.getElementById('current_sector').innerHTML = 'sector 7';
+			//document.getElementById('current_sector').innerHTML = 'sector 7';
 		} else if (mousex < 416 && mousey < 624) {
 			console.log('sector 8');
 			if (board.b2.state == 'blank') {
@@ -140,7 +140,7 @@ function togglewhenonmousdown(event) {
 				console.log(round);
 				round++;
 			}
-			document.getElementById('current_sector').innerHTML = 'sector 8';
+			//document.getElementById('current_sector').innerHTML = 'sector 8';
 		} else if (mousex < 624 && mousey < 624) {
 			//last of last row
 			console.log('sector 9');
@@ -155,7 +155,7 @@ function togglewhenonmousdown(event) {
 				round++;
 			}
 
-			document.getElementById('current_sector').innerHTML = 'sector 9';
+			//document.getElementById('current_sector').innerHTML = 'sector 9';
 		}
 
 		//document.getElementById("coordinates").innerHTML = "placed at: " + player.x + ", " + player.y
@@ -263,13 +263,13 @@ function draw_a_x(x, y) {
 	context_to_canvas.beginPath();
 	context_to_canvas.moveTo(x, y);
 	context_to_canvas.lineTo(x + 150, y + 150);
-	context_to_canvas.strokeStyle = 'white';
+	context_to_canvas.strokeStyle = '#FF6D53  ';
 	context_to_canvas.stroke();
 
 	context_to_canvas.beginPath();
 	context_to_canvas.moveTo(x, y + 150);
 	context_to_canvas.lineTo(x + 150, y);
-	context_to_canvas.strokeStyle = 'white';
+	context_to_canvas.strokeStyle = '#FF6D53  ';
 	context_to_canvas.stroke();
 }
 
@@ -277,7 +277,7 @@ function draw_a_c(x, y) {
 	//console.log("here")
 	context_to_canvas.beginPath();
 	context_to_canvas.arc(x, y, 75, 0, 360);
-	context_to_canvas.strokeStyle = 'white';
+	context_to_canvas.strokeStyle = '#ffff00';
 	context_to_canvas.stroke();
 }
 
@@ -287,7 +287,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(0, 104);
 		context_to_canvas.lineTo(614, 104);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 	} else if (current.t1.state == 'c' && current.t2.state == 'c' && current.t3.state == 'c') {
@@ -295,7 +295,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(0, 104);
 		context_to_canvas.lineTo(614, 104);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 	}
@@ -305,7 +305,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(0, 312);
 		context_to_canvas.lineTo(614, 312);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 	} else if (current.m1.state == 'c' && current.m2.state == 'c' && current.m3.state == 'c') {
@@ -313,7 +313,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(0, 312);
 		context_to_canvas.lineTo(614, 312);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 		//cross out
@@ -324,7 +324,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(0, 520);
 		context_to_canvas.lineTo(614, 520);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 		//anothef corss out
@@ -333,7 +333,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(0, 520);
 		context_to_canvas.lineTo(614, 520);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 	}
@@ -343,7 +343,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(104, 0);
 		context_to_canvas.lineTo(104, 624);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 		//third cross out
@@ -352,7 +352,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(104, 0);
 		context_to_canvas.lineTo(104, 624);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 	}
@@ -361,7 +361,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(312, 0);
 		context_to_canvas.lineTo(312, 624);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 	} else if (current.t2.state == 'c' && current.m2.state == 'c' && current.b2.state == 'c') {
@@ -369,7 +369,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(312, 0);
 		context_to_canvas.lineTo(312, 624);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		game_over();
 		context_to_canvas.stroke();
 	}
@@ -378,7 +378,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(520, 0);
 		context_to_canvas.lineTo(520, 624);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 	} else if (current.t3.state == 'c' && current.m3.state == 'c' && current.b3.state == 'c') {
@@ -387,7 +387,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(520, 0);
 		context_to_canvas.lineTo(520, 624);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 	}
@@ -396,7 +396,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(60, 100);
 		context_to_canvas.lineTo(465, 524);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 	} else if (current.t1.state == 'c' && current.m2.state == 'c' && current.b3.state == 'c') {
@@ -404,7 +404,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(60, 100);
 		context_to_canvas.lineTo(465, 524);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 	}
@@ -413,7 +413,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(79, 524);
 		context_to_canvas.lineTo(564, 100);
-		context_to_canvas.strokeStyle = 'red';
+		context_to_canvas.strokeStyle = '#FF6D53';
 		context_to_canvas.stroke();
 		game_over();
 	} else if (current.t3.state == 'c' && current.m2.state == 'c' && current.b1.state == 'c') {
@@ -421,7 +421,7 @@ function check(current) {
 		context_to_canvas.beginPath();
 		context_to_canvas.moveTo(79, 524);
 		context_to_canvas.lineTo(564, 100);
-		context_to_canvas.strokeStyle = 'blue';
+		context_to_canvas.strokeStyle = '#ffff00';
 		context_to_canvas.stroke();
 		game_over();
 	}

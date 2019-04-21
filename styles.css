@@ -1,3 +1,6 @@
+body {
+	background-color: #fffde6;
+}
 #current_sector {
 	font-size: 35px;
 }
@@ -5,4 +8,5 @@
 	font-size: 35px;
 	border: 2px solid black;
 	border-radius: 5px;
+	background-color: #538fff;
 }
